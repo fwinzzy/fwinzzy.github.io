@@ -17,7 +17,7 @@
 
     <script>
         
-        document.onload = function() {
+        document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('frame').src = 'iframe.html';
             document.getElementById('redirect').addEventListener('click', function() {
                 window.location.href = 'redirect.html';
@@ -26,7 +26,7 @@
                 window.location.href = 'redirect.html';
                 window.open('newredirect.html', '_blank');
             });
-        }
+        });
 
     </script>
 
