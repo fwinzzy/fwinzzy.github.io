@@ -1,1 +1,34 @@
-<h1>Hello, World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <h1>Main</h1>
+
+    <iframe src="" width="100%" height="300px" id="frame"></iframe>
+
+    <button type="button" id="redirect">Redirect</button>
+
+    <button type="button" id="new_redirect">New Redirect</button>
+
+    <script>
+        
+        document.onload = function() {
+            document.getElementById('frame').src = 'iframe.html';
+            document.getElementById('redirect').addEventListener('click', function() {
+                window.location.href = 'redirect.html';
+            });
+            document.getElementById('new_redirect').addEventListener('click', function() {
+                window.location.href = 'redirect.html';
+                window.open('newredirect.html', '_blank');
+            });
+        }
+
+    </script>
+
+</body>
+</html>
